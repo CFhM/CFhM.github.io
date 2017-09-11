@@ -370,110 +370,15 @@
 
       
         
-          
-            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><h1 id="vscode简介"><a class="markdownIt-Anchor" href="#vscode简介"></a> vscode简介</h1>
+          <h1 id="vscode简介"><a class="markdownIt-Anchor" href="#vscode简介"></a> vscode简介</h1>
 <p>​      vscode 全称 visual studio code，是一个运行于 OS X，Windows 和 Linux 之上的，针对于编写现代web和云应用的跨平台编辑器。除了上述提到的，它在c/c++的编写上也有非常优秀的表现，并且有着十分友好的快捷键以及可以高度自定义等特性。他是一款轻量级的编辑器，但丰富的插件又使其不失灵巧性，当你觉得visual studio太过笨重/难以使用/功能太多用不到时，不妨试试这款可以由你亲自定义的编辑器。</p>
-<p>​       下面是两张vscode编写c程序hello world以及debug的图示<img src="http://ow4c379vu.bkt.clouddn.com/edit.png" alt="edit"></p>
-<p>​      上图中，中间区域为编写区域，可以看到vscode有良好的分屏支持，左边的分屏1为输入文件，右侧的分屏3为输出文件，下方为集成的terminal（可选cmd或ps），运行简单的编译脚本，就可以完成对程序的编译和运行了。</p>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/debug.png" alt="debug"></p>
-<p>​       上图为vscode debug C程序时的调试界面，分别可以实现对当前变量、用户变量、程序线程和断点的监控。</p>
-<p>​       今天我们介绍的就是如何在windows平台上安装vscode并很方便的使用它来编写C/C++程序。</p>
-<h1 id="vscode的安装"><a class="markdownIt-Anchor" href="#vscode的安装"></a> vscode的安装</h1>
-<ul>
-<li>下载vscode安装程序
-<ul>
-<li>访问vscode官方网站：<a href="https://code.visualstudio.com/" target="_blank" rel="external">https://code.visualstudio.com/</a></li>
-<li>选择适合系统版本的安装包进行下载（x64/x86）</li>
-</ul>
-</li>
-</ul>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/choose-version.png" alt="choose-version"></p>
-<ul>
-<li>运行安装文件
-<ul>
-<li>安装路径一定要在C盘，不然后面的编译功能和代码提示功能会受到影响（对C盘文件访问权限的问题）。</li>
-<li>将<code>其他</code>中的选项全部打勾。</li>
-<li>安装</li>
-</ul>
-</li>
-</ul>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/select-other.png" alt="select-other"></p>
-<hr>
-<h1 id="vscode简单配置"><a class="markdownIt-Anchor" href="#vscode简单配置"></a> vscode简单配置</h1>
-<h2 id="常用插件"><a class="markdownIt-Anchor" href="#常用插件"></a> 常用插件</h2>
-<p>对于将要编写C/C++的新手，下面几款插件是推荐安装使用的</p>
-<ul>
-<li>VScode Great Icons：文件图标插件</li>
-<li>One Monokai Theme：主题插件</li>
-<li>C/C++：C/C++代码提示、编译、运行等集成插件</li>
-<li>Code Runner：简易代码一键运行插件</li>
-</ul>
-<p>​       上述内容在vscode左侧栏最后一项<code>扩展</code>页面中可以搜索下载，下载完成后需点击<code>重新加载</code>（下载完所有插件后点一次即可）。</p>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/extendsion.png" alt="extension"></p>
-<h2 id="配置主题"><a class="markdownIt-Anchor" href="#配置主题"></a> 配置主题</h2>
-<ul>
-<li>在菜单栏依次点击<code>文件-首选项-颜色主题</code>，选择<code>One Monokai</code></li>
-<li>其他主题也可依照提示进行安装并使用，本主题为示例图片所用主题</li>
-</ul>
-<h2 id="配置文件图标"><a class="markdownIt-Anchor" href="#配置文件图标"></a> 配置文件图标</h2>
-<ul>
-<li>在菜单栏依次点击<code>文件-首选项-文件图标主题</code>，选择<code>VSCode Great Icons</code></li>
-<li>其他主题也可依照提示进行安装并使用，本主题为示例图片所用主题</li>
-</ul>
-<h2 id="所有设置"><a class="markdownIt-Anchor" href="#所有设置"></a> 所有设置</h2>
-<ul>
-<li>vscode的所有设置是以json文件进行存储的，点击<code>文件-首选项-设置</code>即可配置，须在右侧分栏写入自己的配置，每个设置项在默认栏处都有详细的注释，有兴趣的朋友可以耐心阅读并选择适合自己的配置。下面是博主所用配置。</li>
-</ul>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"workbench.iconTheme"</span>: <span class="string">"vscode-great-icons"</span>,</div><div class="line">    <span class="attr">"workbench.colorTheme"</span>: <span class="string">"One Monokai"</span>,</div><div class="line">    <span class="attr">"terminal.integrated.shell.windows"</span>: <span class="string">"C:\\Windows\\Sysnative\\cmd.exe"</span>,</div><div class="line">    <span class="attr">"editor.snippetSuggestions"</span>: <span class="string">"top"</span>,</div><div class="line">    <span class="attr">"editor.fontSize"</span>: <span class="number">15</span>,</div><div class="line">    <span class="attr">"editor.wordWrap"</span>:<span class="string">"on"</span>,</div><div class="line">    <span class="attr">"editor.fontFamily"</span>: <span class="string">"Consolas,Courier New, monospace"</span>,</div><div class="line">    <span class="attr">"files.autoSave"</span>: <span class="string">"off"</span>,</div><div class="line">    <span class="attr">"window.zoomLevel"</span>: <span class="number">0</span>,</div><div class="line">    <span class="attr">"C_Cpp.intelliSenseEngineFallback"</span>: <span class="string">"Enabled"</span>,</div><div class="line">    <span class="attr">"C_Cpp.errorSquiggles"</span>: <span class="string">"Disabled"</span>,</div><div class="line">    <span class="attr">"editor.tabSize"</span>: <span class="number">4</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<hr>
-<h1 id="vscode编写并运行cc程序"><a class="markdownIt-Anchor" href="#vscode编写并运行cc程序"></a> vscode编写并运行C/C++程序</h1>
-<h2 id="配置mingw-g编译器"><a class="markdownIt-Anchor" href="#配置mingw-g编译器"></a> 配置mingw g++编译器</h2>
-<ul>
-<li><a href="https://sourceforge.net/projects/mingw/files/latest/download?source=files" target="_blank" rel="external">点我</a>下载mingw下载工具</li>
-<li>运行下载工具，一路选择continue（<strong>安装路径在C盘千万不要改</strong>），等待下载组件</li>
-<li>之后会弹出Installation Manager，在左侧选择<code>All Packages</code></li>
-<li>在右边的选项列表中依次勾选(右键<code>Mark for Installation</code>)<em><strong>class为bin</strong></em>  的<code>mingw32-binutils</code>，<code>mingw32-gcc</code>，<code>mingw32-g++</code>，<code>mingw32-gdb</code>，期间系统还会自动勾选一些选项，不要管他</li>
-</ul>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/mark1.png" alt="mark1"></p>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/mark3.png" alt="mark2"></p>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/mark2.png" alt="mark3"></p>
-<ul>
-<li>在最上方的菜单栏中选择<code>Installation-Apply Changes</code>，在弹出的选项卡中点击<code>Apply</code>，等待所有组件被下载安装完成。</li>
-</ul>
-<h2 id="设置系统环境变量"><a class="markdownIt-Anchor" href="#设置系统环境变量"></a> 设置系统环境变量</h2>
-<p>​       由于各个版本的windows差别较大，这里仅介绍windows10的配置方法，其余的环境变量设置方式请自行搜索或在博客下留言。</p>
-<ul>
-<li>在Cortana搜索框中输入<code>环境变量</code>，并点击进入<code>编辑系统环境变量</code></li>
-</ul>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/system-path.png" alt="system-path"></p>
-<ul>
-<li>将mingw的bin目录加入你的环境变量，若你的mingw是默认安装，则环境变量为<code>C:\MinGW\bin</code></li>
-</ul>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/new-system-path.png" alt="new-system-path"></p>
-<ul>
-<li>一路确定并重启计算机</li>
-</ul>
-<h2 id="测试你的cc编译器"><a class="markdownIt-Anchor" href="#测试你的cc编译器"></a> 测试你的C/C++编译器</h2>
-<ul>
-<li>使用<code>win+R</code>调出运行界面，输入<code>cmd</code>回车运行命令提示符，输入<code>gcc</code>并回车</li>
-<li>若显示<code>gcc: fatal error: no input files compilation terminated.</code>则说明安装成功</li>
-</ul>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/gcc-test.png" alt="gcc-test"></p>
-<h1 id="vscode编写运行c程序"><a class="markdownIt-Anchor" href="#vscode编写运行c程序"></a> vscode编写运行C程序</h1>
-<p>​     这里仅介绍使用<code>Code Runner</code>插件编译运行的方法，当读者学会gcc编译器的操作后，自然可以自行完成脚本来实现带有其他编译命令的运行方式。</p>
-<ul>
-<li>在桌面新建一个文件夹，例如<code>ff</code>（一定要在文件夹下才能运行<code>Code Runner</code>）</li>
-<li>右键该文件夹，选择<code>Open with Code</code></li>
-<li><code>Ctrl+N</code>新建一个文件，<code>Ctrl+S</code>保存为<code>.c</code>文件，如<code>test.c</code></li>
-<li>编写简单的C示例程序Hello World</li>
-<li>编写完成后<code>Ctrl+S</code>保存（<strong>保存很重要！</strong>）</li>
-<li><code>Ctrl+Alt+N</code>运行，可以看到输出结果</li>
-</ul>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/run-code.png" alt="run-code"></p>
-<p>以上就是vscode的安装、配置以及编写C程序的详细教程。</p>
-<p>后续还有使用脚本自定义编译命令、输入输出重定向到文件、使用debug功能调试代码等教程，欢迎持续关注本博客~</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/11/vscode-1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
