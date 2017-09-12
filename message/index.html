@@ -105,13 +105,13 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta property="og:title" content="留言板">
+<meta property="og:url" content="http://yoursite.com/message/index.html">
 <meta property="og:site_name" content="CFhM_R&#39;s Blog">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-12T02:08:19.267Z">
+<meta property="og:updated_time" content="2017-09-12T02:12:01.018Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="留言板">
 
 
 
@@ -141,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/message/"/>
 
 
 
 
 
-  <title>tags | CFhM_R's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>留言板 | CFhM_R's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -290,7 +290,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
+	<h1 class="post-title" itemprop="name headline">留言板</h1>
 
 
 
@@ -302,14 +302,7 @@
       <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 6 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/C-C/" style="font-size: 12px; color: #ccc">C/C++</a> <a href="/tags/CFhM-Training/" style="font-size: 12px; color: #ccc">CFhM Training</a> <a href="/tags/Mingw/" style="font-size: 12px; color: #ccc">Mingw</a> <a href="/tags/c/" style="font-size: 12px; color: #ccc">c++</a> <a href="/tags/vscode/" style="font-size: 12px; color: #ccc">vscode</a> <a href="/tags/题解/" style="font-size: 12px; color: #ccc">题解</a>
-            </div>
-          </div>
+          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
         
       </div>
       
@@ -327,6 +320,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="hypercomments_widget"></div>
+    
+  </div>
+
 
         </div>
         
@@ -590,6 +589,8 @@
 
 		_hcwp.push({widget:"Bloggerstream", widget_id: 95423, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
+		
+		_hcwp.push({widget:"Stream", widget_id: 95423, xid: "message/index.html"});
 		
 
 		(function() {
