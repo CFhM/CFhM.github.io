@@ -120,7 +120,7 @@
 <meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/runtime.png">
 <meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/select.png">
 <meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/debug1.png">
-<meta property="og:updated_time" content="2017-09-16T15:09:46.415Z">
+<meta property="og:updated_time" content="2017-09-16T15:44:25.809Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vscode编译运行以及配置debug C&#x2F;C++">
 <meta name="twitter:description" content="vscode 使用脚本编译C/C++  关于gcc / g++ 编译命令  详细内容参考这篇博客 这里介绍常用的命令：  假设你的C文件叫做ff.c，那么编译他的命令就是gcc ff.cpp -o ff，这时你的源程序目录下就会生成可执行文件ff.exe">
@@ -428,14 +428,15 @@
 <ul>
 <li>假设你的C文件叫做<code>ff.c</code>，那么<strong>编译</strong>他的命令就是<code>gcc ff.cpp -o ff</code>，这时你的源程序目录下就会生成可执行文件<code>ff.exe</code></li>
 </ul>
+<a id="more"></a>
+<ul>
+<li>再在终端下执行<code>ff</code>（cmd）或<code>./ff</code>（powershell）就可以运行</li>
+<li>指定编译的C语言标准：<code>-std=c11</code>（设为c11标准）</li>
+<li>静态编译：<code>-static</code></li>
+<li>开启O2级别优化：<code>-O2</code></li>
+</ul>
 </li>
 </ul>
-<a id="more"></a>
-<pre><code>-   再在终端下执行`ff`（cmd）或`./ff`（powershell）就可以运行
--   指定编译的C语言标准：`-std=c11`（设为c11标准）
--   静态编译：`-static`
--   开启O2级别优化：`-O2`
-</code></pre>
 <h2 id="使用bat脚本实现自动化编译运行"><a class="markdownIt-Anchor" href="#使用bat脚本实现自动化编译运行"></a> 使用<code>.bat</code>脚本实现自动化编译运行</h2>
 <ul>
 <li>首先若要在vscode的集成的终端中运行文件，必须以打开文件夹的方式编写你的程序</li>
