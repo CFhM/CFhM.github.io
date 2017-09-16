@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="vscode,C/C++,Mingw," />
+  <meta name="keywords" content="vscode," />
 
 
 
@@ -104,31 +104,27 @@
         }
     })();
 </script>
-<meta name="description" content="vscode简介 ​      vscode 全称 visual studio code，是一个运行于 OS X，Windows 和 Linux 之上的，针对于编写现代web和云应用的跨平台编辑器。除了上述提到的，它在c/c++的编写上也有非常优秀的表现，并且有着十分友好的快捷键以及可以高度自定义等特性。他是一款轻量级的编辑器，但丰富的插件又使其不失灵巧性，当你觉得visual studio太过">
-<meta name="keywords" content="vscode,C&#x2F;C++,Mingw">
+<meta name="description" content="vscode 使用脚本编译C/C++  关于gcc / g++ 编译命令  详细内容参考这篇博客 这里介绍常用的命令：  假设你的C文件叫做ff.c，那么编译他的命令就是gcc ff.cpp -o ff，这时你的源程序目录下就会生成可执行文件ff.exe">
+<meta name="keywords" content="vscode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vscode安装及使用coderunner运行C程序教程">
-<meta property="og:url" content="http://yoursite.com/2017/09/11/vscode-1/index.html">
+<meta property="og:title" content="vscode编译运行以及配置debug C&#x2F;c++">
+<meta property="og:url" content="http://yoursite.com/2017/09/16/vscode-2/index.html">
 <meta property="og:site_name" content="CFhM_R&#39;s Blog">
-<meta property="og:description" content="vscode简介 ​      vscode 全称 visual studio code，是一个运行于 OS X，Windows 和 Linux 之上的，针对于编写现代web和云应用的跨平台编辑器。除了上述提到的，它在c/c++的编写上也有非常优秀的表现，并且有着十分友好的快捷键以及可以高度自定义等特性。他是一款轻量级的编辑器，但丰富的插件又使其不失灵巧性，当你觉得visual studio太过">
+<meta property="og:description" content="vscode 使用脚本编译C/C++  关于gcc / g++ 编译命令  详细内容参考这篇博客 这里介绍常用的命令：  假设你的C文件叫做ff.c，那么编译他的命令就是gcc ff.cpp -o ff，这时你的源程序目录下就会生成可执行文件ff.exe">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/edit.png">
-<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/debug.png">
-<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/choose-version.png">
-<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/select-other.png">
-<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/extendsion.png">
-<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/mark1.png">
-<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/mark3.png">
-<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/mark2.png">
-<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/system-path.png">
-<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/new-system-path.png">
-<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/gcc-test.png">
-<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/run-code.png">
-<meta property="og:updated_time" content="2017-09-16T11:38:08.641Z">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/bat.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/showfileroute.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/run.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/split.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/key1.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/runtime.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/select.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/debug1.png">
+<meta property="og:updated_time" content="2017-09-16T14:54:19.392Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vscode安装及使用coderunner运行C程序教程">
-<meta name="twitter:description" content="vscode简介 ​      vscode 全称 visual studio code，是一个运行于 OS X，Windows 和 Linux 之上的，针对于编写现代web和云应用的跨平台编辑器。除了上述提到的，它在c/c++的编写上也有非常优秀的表现，并且有着十分友好的快捷键以及可以高度自定义等特性。他是一款轻量级的编辑器，但丰富的插件又使其不失灵巧性，当你觉得visual studio太过">
-<meta name="twitter:image" content="http://ow4c379vu.bkt.clouddn.com/edit.png">
+<meta name="twitter:title" content="vscode编译运行以及配置debug C&#x2F;c++">
+<meta name="twitter:description" content="vscode 使用脚本编译C/C++  关于gcc / g++ 编译命令  详细内容参考这篇博客 这里介绍常用的命令：  假设你的C文件叫做ff.c，那么编译他的命令就是gcc ff.cpp -o ff，这时你的源程序目录下就会生成可执行文件ff.exe">
+<meta name="twitter:image" content="http://ow4c379vu.bkt.clouddn.com/bat.png">
 
 
 
@@ -158,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/11/vscode-1/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/16/vscode-2/"/>
 
 
 
 
 
-  <title>vscode安装及使用coderunner运行C程序教程 | CFhM_R's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>vscode编译运行以及配置debug C/c++ | CFhM_R's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -312,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/11/vscode-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/16/vscode-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CFhM_R">
@@ -329,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vscode安装及使用coderunner运行C程序教程</h1>
+          <h1 class="post-title" itemprop="name headline">vscode编译运行以及配置debug C/c++</h1>
         
 
         <div class="post-meta">
@@ -341,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-11T23:42:17+08:00">
-                2017-09-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-16T19:37:40+08:00">
+                2017-09-16
               </time>
             
 
@@ -383,8 +379,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/09/11/vscode-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/09/11/vscode-1/" itemprop="commentsCount"></span>
+                <a href="/2017/09/16/vscode-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/09/16/vscode-2/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -393,7 +389,7 @@
 
           
           
-             <span id="/2017/09/11/vscode-1/" class="leancloud_visitors" data-flag-title="vscode安装及使用coderunner运行C程序教程">
+             <span id="/2017/09/16/vscode-2/" class="leancloud_visitors" data-flag-title="vscode编译运行以及配置debug C/c++">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -424,108 +420,123 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><h1 id="vscode简介"><a class="markdownIt-Anchor" href="#vscode简介"></a> vscode简介</h1>
-<p>​      vscode 全称 visual studio code，是一个运行于 OS X，Windows 和 Linux 之上的，针对于编写现代web和云应用的跨平台编辑器。除了上述提到的，它在c/c++的编写上也有非常优秀的表现，并且有着十分友好的快捷键以及可以高度自定义等特性。他是一款轻量级的编辑器，但丰富的插件又使其不失灵巧性，当你觉得visual studio太过笨重/难以使用/功能太多用不到时，不妨试试这款可以由你亲自定义的编辑器。</p>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><h1 id="vscode-使用脚本编译cc"><a class="markdownIt-Anchor" href="#vscode-使用脚本编译cc"></a> vscode 使用脚本编译C/C++</h1>
+<h2 id="关于gcc-g-编译命令"><a class="markdownIt-Anchor" href="#关于gcc-g-编译命令"></a> 关于gcc / g++ 编译命令</h2>
+<ul>
+<li>详细内容参考<a href="http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html" target="_blank" rel="external">这篇博客</a></li>
+<li>这里介绍常用的命令：
+<ul>
+<li>假设你的C文件叫做<code>ff.c</code>，那么<strong>编译</strong>他的命令就是<code>gcc ff.cpp -o ff</code>，这时你的源程序目录下就会生成可执行文件<code>ff.exe</code></li>
+</ul>
+</li>
+</ul>
 <a id="more"></a>
-<p>​       下面是两张vscode编写c程序hello world以及debug的图示<img src="http://ow4c379vu.bkt.clouddn.com/edit.png" alt="edit"></p>
-<p>​      上图中，中间区域为编写区域，可以看到vscode有良好的分屏支持，左边的分屏1为输入文件，右侧的分屏3为输出文件，下方为集成的terminal（可选cmd或ps），运行简单的编译脚本，就可以完成对程序的编译和运行了。</p>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/debug.png" alt="debug"></p>
-<p>​       上图为vscode debug C程序时的调试界面，分别可以实现对当前变量、用户变量、程序线程和断点的监控。</p>
-<p>​       今天我们介绍的就是如何在windows平台上安装vscode并很方便的使用它来编写C/C++程序。</p>
-<h1 id="vscode的安装"><a class="markdownIt-Anchor" href="#vscode的安装"></a> vscode的安装</h1>
+<pre><code>-   再在终端下执行`ff`（cmd）或`./ff`（powershell）就可以运行
+-   指定编译的C语言标准：`-std=c11`（设为c11标准）
+-   静态编译：`-static`
+-   开启O2级别优化：`-O2`
+</code></pre>
+<h2 id="使用bat脚本实现自动化编译运行"><a class="markdownIt-Anchor" href="#使用bat脚本实现自动化编译运行"></a> 使用<code>.bat</code>脚本实现自动化编译运行</h2>
 <ul>
-<li>下载vscode安装程序
-<ul>
-<li>访问vscode官方网站：<a href="https://code.visualstudio.com/" target="_blank" rel="external">https://code.visualstudio.com/</a></li>
-<li>选择适合系统版本的安装包进行下载（x64/x86）</li>
+<li>首先若要在vscode的集成的终端中运行文件，必须以打开文件夹的方式编写你的程序</li>
+<li>假设你的文件夹的绝对路径是<code>C:\Users\ff\Desktop</code>，那么我们的<code>.bat</code>文件也要放在这个目录下。</li>
+<li>下面是我的<code>.bat</code>文件的示例</li>
 </ul>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@echo off</div><div class="line">cd C:\Users\ff\Desktop\ff</div><div class="line">gcc test.c -o test -std=c11 -O2</div><div class="line">test</div></pre></td></tr></table></figure>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/bat.png" alt="bat"></p>
+<ul>
+<li>
+<p>下面是简单的解释：</p>
+<ul>
+<li>
+<p>关闭命令回显</p>
+</li>
+<li>
+<p>打开工作目录（替换成你的工作目录）</p>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/showfileroute.png" alt="show"></p>
+</li>
+<li>
+<p>以c11标准 O2优化编译test.c文件（替换成你自己的.c文件） 并声称test.exe可执行文件</p>
+</li>
+<li>
+<p>运行test.exe</p>
 </li>
 </ul>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/choose-version.png" alt="choose-version"></p>
-<ul>
-<li>运行安装文件
-<ul>
-<li>安装路径一定要在C盘，不然后面的编译功能和代码提示功能会受到影响（对C盘文件访问权限的问题）。</li>
-<li>将<code>其他</code>中的选项全部打勾。</li>
-<li>安装</li>
-</ul>
+</li>
+<li>
+<p>将上面的文件保存在你的目录下，命名为<code>run.bat</code>，在vscode中按ctrl+` 打开终端</p>
+</li>
+<li>
+<p>输入<code>run</code>（cmd）或<code>./run</code>（powershell）即可运行查看结果</p>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/run.png" alt="run"></p>
 </li>
 </ul>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/select-other.png" alt="select-other"></p>
-<hr>
-<h1 id="vscode简单配置"><a class="markdownIt-Anchor" href="#vscode简单配置"></a> vscode简单配置</h1>
-<h2 id="常用插件"><a class="markdownIt-Anchor" href="#常用插件"></a> 常用插件</h2>
-<p>对于将要编写C/C++的新手，下面几款插件是推荐安装使用的</p>
+<h2 id="结合分屏的输入输出重定向方法"><a class="markdownIt-Anchor" href="#结合分屏的输入输出重定向方法"></a> 结合分屏的输入输出重定向方法</h2>
 <ul>
-<li>VScode Great Icons：文件图标插件</li>
-<li>One Monokai Theme：主题插件</li>
-<li>C/C++：C/C++代码提示、编译、运行等集成插件</li>
-<li>Code Runner：简易代码一键运行插件</li>
+<li>很多时候我们需要向程序输入大量的数据，一个个手动输入就会特别繁琐，因此我们需要学习将输入输出重定向到文件中，这样只要一次将输入写入文件，此后就不需要再次输入重复的内容了。</li>
 </ul>
-<p>​       上述内容在vscode左侧栏最后一项<code>扩展</code>页面中可以搜索下载，下载完成后需点击<code>重新加载</code>（下载完所有插件后点一次即可）。</p>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/extendsion.png" alt="extension"></p>
-<h2 id="配置主题"><a class="markdownIt-Anchor" href="#配置主题"></a> 配置主题</h2>
+<h3 id="vscode的分屏功能"><a class="markdownIt-Anchor" href="#vscode的分屏功能"></a> vscode的分屏功能</h3>
 <ul>
-<li>在菜单栏依次点击<code>文件-首选项-颜色主题</code>，选择<code>One Monokai</code></li>
-<li>其他主题也可依照提示进行安装并使用，本主题为示例图片所用主题</li>
+<li>按<code>ctrl+\</code>开启分屏功能，vscode中最多可以分左中右三屏，我们在文件夹下创建两个文件<code>in.txt</code>和<code>out.txt</code>分别作为输入和输出被重定向的文件，并分别在左右屏打开，如图所示</li>
 </ul>
-<h2 id="配置文件图标"><a class="markdownIt-Anchor" href="#配置文件图标"></a> 配置文件图标</h2>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/split.png" alt="split"></p>
 <ul>
-<li>在菜单栏依次点击<code>文件-首选项-文件图标主题</code>，选择<code>VSCode Great Icons</code></li>
-<li>其他主题也可依照提示进行安装并使用，本主题为示例图片所用主题</li>
+<li>
+<p>向左移动编辑器组的快捷键是<code>ctrl+k leftarrow</code>，向右为<code>ctrl+k rightarrow</code></p>
+</li>
+<li>
+<p>三个屏从左到右依次标号为1、2、3，切换焦点到对应的编辑器的快捷键为<code>ctrl+1/2/3</code></p>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/key1.png" alt="key"></p>
+</li>
 </ul>
-<h2 id="所有设置"><a class="markdownIt-Anchor" href="#所有设置"></a> 所有设置</h2>
+<h3 id="重定向输入输出"><a class="markdownIt-Anchor" href="#重定向输入输出"></a> 重定向输入输出</h3>
+<h4 id="freopen"><a class="markdownIt-Anchor" href="#freopen"></a> freopen</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    freopen(<span class="string">"in.txt"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</div><div class="line">    freopen(<span class="string">"out.txt"</span>, <span class="string">"w"</span>, <span class="built_in">stdout</span>);</div><div class="line">    </div><div class="line">    <span class="comment">// your code</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
-<li>vscode的所有设置是以json文件进行存储的，点击<code>文件-首选项-设置</code>即可配置，须在右侧分栏写入自己的配置，每个设置项在默认栏处都有详细的注释，有兴趣的朋友可以耐心阅读并选择适合自己的配置。下面是博主所用配置。</li>
+<li>将上面两句freopen加到main函数的最前面即可，关于文件读写的其他操作欢迎关注后续的博客。</li>
 </ul>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"workbench.iconTheme"</span>: <span class="string">"vscode-great-icons"</span>,</div><div class="line">    <span class="attr">"workbench.colorTheme"</span>: <span class="string">"One Monokai"</span>,</div><div class="line">    <span class="attr">"terminal.integrated.shell.windows"</span>: <span class="string">"C:\\Windows\\Sysnative\\cmd.exe"</span>,</div><div class="line">    <span class="attr">"editor.snippetSuggestions"</span>: <span class="string">"top"</span>,</div><div class="line">    <span class="attr">"editor.fontSize"</span>: <span class="number">15</span>,</div><div class="line">    <span class="attr">"editor.wordWrap"</span>:<span class="string">"on"</span>,</div><div class="line">    <span class="attr">"editor.fontFamily"</span>: <span class="string">"Consolas,Courier New, monospace"</span>,</div><div class="line">    <span class="attr">"files.autoSave"</span>: <span class="string">"off"</span>,</div><div class="line">    <span class="attr">"window.zoomLevel"</span>: <span class="number">0</span>,</div><div class="line">    <span class="attr">"C_Cpp.intelliSenseEngineFallback"</span>: <span class="string">"Enabled"</span>,</div><div class="line">    <span class="attr">"C_Cpp.errorSquiggles"</span>: <span class="string">"Disabled"</span>,</div><div class="line">    <span class="attr">"editor.tabSize"</span>: <span class="number">4</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<hr>
-<h1 id="vscode编写并运行cc程序"><a class="markdownIt-Anchor" href="#vscode编写并运行cc程序"></a> vscode编写并运行C/C++程序</h1>
-<h2 id="配置mingw-g编译器"><a class="markdownIt-Anchor" href="#配置mingw-g编译器"></a> 配置mingw g++编译器</h2>
+<h4 id="运行时重定向"><a class="markdownIt-Anchor" href="#运行时重定向"></a> 运行时重定向</h4>
 <ul>
-<li><a href="https://sourceforge.net/projects/mingw/files/latest/download?source=files" target="_blank" rel="external">点我</a>下载mingw下载工具</li>
-<li>运行下载工具，一路选择continue（<strong>安装路径在C盘千万不要改</strong>），等待下载组件</li>
-<li>之后会弹出Installation Manager，在左侧选择<code>All Packages</code></li>
-<li>在右边的选项列表中依次勾选(右键<code>Mark for Installation</code>)<em><strong>class为bin</strong></em>  的<code>mingw32-binutils</code>，<code>mingw32-gcc</code>，<code>mingw32-g++</code>，<code>mingw32-gdb</code>，期间系统还会自动勾选一些选项，不要管他</li>
+<li>
+<p>上述做法有一个明显的弊端——算法竞赛时需要从标准的输入输出来读取，因此我们在本地测试完提交自己的代码到OJ上面时需要注释掉这两句话，而新手甚至老手都会常常忘记这一点，造成无谓的WA，因此需要下面的方法。</p>
+</li>
+<li>
+<p>将<code>run.bat</code>中运行test.exe的命令<code>test</code>后加上<code>&lt;in.txt &gt;out.txt</code>即可，效果如图：</p>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/runtime.png" alt="run2"></p>
+</li>
 </ul>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/mark1.png" alt="mark1"></p>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/mark3.png" alt="mark2"></p>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/mark2.png" alt="mark3"></p>
+<h1 id="vscode配置cc-debug"><a class="markdownIt-Anchor" href="#vscode配置cc-debug"></a> vscode配置C/C++ debug</h1>
+<h2 id="配置launchjson文件"><a class="markdownIt-Anchor" href="#配置launchjson文件"></a> 配置<code>launch.json</code>文件</h2>
 <ul>
-<li>在最上方的菜单栏中选择<code>Installation-Apply Changes</code>，在弹出的选项卡中点击<code>Apply</code>，等待所有组件被下载安装完成。</li>
+<li>
+<p>在左侧栏中选择第四项打开debug侧栏，点击上方的绿色箭头，会弹出选择环境，选择<code>C++(GDB/LLDB)</code>，提示<code>没有配置</code>，选择<code>打开launch.json</code>，选择<code>C++(GDB/LLDB)</code></p>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/select.png" alt=""></p>
+</li>
+<li>
+<p>将下面的内容复制到你的文件中，并按注释修改相关内容</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"version"</span>: <span class="string">"0.2.0"</span>,</div><div class="line">    <span class="attr">"configurations"</span>: [</div><div class="line">        &#123;</div><div class="line">            "name": "C++ Launch (GDB)",                 // 配置名称，将会在启动配置的下拉菜单中显示</div><div class="line">            "type": "cppdbg",                           // 配置类型，这里只能为cppdbg</div><div class="line">            "request": "launch",                        // 请求配置类型，可以为launch（启动）或attach（附加）</div><div class="line">            "launchOptionType": "Local",                // 调试器启动类型，这里只能为Local</div><div class="line">            "targetArchitecture": "x86",                // 生成目标架构，一般为x86或x64，可以为x86, arm, arm64, mips, x64, amd64, x86_64</div><div class="line">            "program": "$&#123;file&#125;.exe",                   // 将要进行调试的程序的路径</div><div class="line">            "miDebuggerPath":"C:\\MinGW\\bin\\gdb.exe", // miDebugger的路径，注意这里要与MinGw的路径对应</div><div class="line">            "args": [],                                 // 程序调试时传递给程序的命令行参数，一般设为空即可</div><div class="line">            "stopAtEntry": false,                       // 设为true时程序将暂停在程序入口处，一般设置为false</div><div class="line">            "cwd": "$&#123;workspaceRoot&#125;",                  // 调试程序时的工作目录，一般为$&#123;workspaceRoot&#125;即代码所在目录</div><div class="line">            "externalConsole": true,                    // 调试时是否显示控制台窗口，一般设置为true显示控制台</div><div class="line">            "preLaunchTask": "gcc"　　                  // 调试会话开始前执行的任务，一般为编译程序，c++为g++, c为gcc</div><div class="line">        &#125;</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h2 id="设置系统环境变量"><a class="markdownIt-Anchor" href="#设置系统环境变量"></a> 设置系统环境变量</h2>
-<p>​       由于各个版本的windows差别较大，这里仅介绍windows10的配置方法，其余的环境变量设置方式请自行搜索或在博客下留言。</p>
+<h2 id="配置taskjson文件"><a class="markdownIt-Anchor" href="#配置taskjson文件"></a> 配置<code>task.json</code>文件</h2>
 <ul>
-<li>在Cortana搜索框中输入<code>环境变量</code>，并点击进入<code>编辑系统环境变量</code></li>
+<li>
+<p>再次点击绿色箭头，点击<code>配置任务运行程序</code>，任意选择一项生成命令，编辑<code>task.json</code>文件如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"version"</span>: <span class="string">"0.1.0"</span>,</div><div class="line">    <span class="attr">"command"</span>: <span class="string">"gcc"</span>,</div><div class="line">    "args": ["-g","$&#123;file&#125;","-o","$&#123;file&#125;.exe"],    // 编译命令参数</div><div class="line">    "problemMatcher": &#123;</div><div class="line">        "owner": "cpp",</div><div class="line">        "fileLocation": ["relative", "$&#123;workspaceRoot&#125;"],</div><div class="line">        "pattern": &#123;</div><div class="line">            "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",</div><div class="line">            "file": 1,</div><div class="line">            "line": 2,</div><div class="line">            "column": 3,</div><div class="line">            "severity": 4,</div><div class="line">            "message": 5</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li>
+<p>这时再点击绿色小箭头，或在<code>.c</code>文件处于焦点状态时（即光标在.c）文件处按<code>F5</code>即可出现如下图的调试界面</p>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/debug1.png" alt="debug"></p>
+</li>
+<li>
+<p>至此我们的配置工作全部完成</p>
+</li>
 </ul>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/system-path.png" alt="system-path"></p>
+<h2 id="常用快捷键"><a class="markdownIt-Anchor" href="#常用快捷键"></a> 常用快捷键</h2>
 <ul>
-<li>将mingw的bin目录加入你的环境变量，若你的mingw是默认安装，则环境变量为<code>C:\MinGW\bin</code></li>
+<li>下一步<code>F10</code></li>
+<li>单步运行<code>F11</code></li>
+<li>停止<code>Shift+F5</code></li>
 </ul>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/new-system-path.png" alt="new-system-path"></p>
-<ul>
-<li>一路确定并重启计算机</li>
-</ul>
-<h2 id="测试你的cc编译器"><a class="markdownIt-Anchor" href="#测试你的cc编译器"></a> 测试你的C/C++编译器</h2>
-<ul>
-<li>使用<code>win+R</code>调出运行界面，输入<code>cmd</code>回车运行命令提示符，输入<code>gcc</code>并回车</li>
-<li>若显示<code>gcc: fatal error: no input files compilation terminated.</code>则说明安装成功</li>
-</ul>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/gcc-test.png" alt="gcc-test"></p>
-<h1 id="vscode编写运行c程序"><a class="markdownIt-Anchor" href="#vscode编写运行c程序"></a> vscode编写运行C程序</h1>
-<p>​     这里仅介绍使用<code>Code Runner</code>插件编译运行的方法，当读者学会gcc编译器的操作后，自然可以自行完成脚本来实现带有其他编译命令的运行方式。</p>
-<ul>
-<li>在桌面新建一个文件夹，例如<code>ff</code>（一定要在文件夹下才能运行<code>Code Runner</code>）</li>
-<li>右键该文件夹，选择<code>Open with Code</code></li>
-<li><code>Ctrl+N</code>新建一个文件，<code>Ctrl+S</code>保存为<code>.c</code>文件，如<code>test.c</code></li>
-<li>编写简单的C示例程序Hello World</li>
-<li>编写完成后<code>Ctrl+S</code>保存（<strong>保存很重要！</strong>）</li>
-<li><code>Ctrl+Alt+N</code>运行，可以看到输出结果</li>
-</ul>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/run-code.png" alt="run-code"></p>
-<p>以上就是vscode的安装、配置以及编写C程序的详细教程。</p>
-<p>后续还有使用脚本自定义编译命令、输入输出重定向到文件、使用debug功能调试代码等教程，欢迎持续关注本博客~</p>
 
       
     </div>
@@ -545,10 +556,6 @@
           
             <a href="/tags/vscode/" rel="tag"># vscode</a>
           
-            <a href="/tags/C-C/" rel="tag"># C/C++</a>
-          
-            <a href="/tags/Mingw/" rel="tag"># Mingw</a>
-          
         </div>
       
 
@@ -560,8 +567,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/11/sol2/" rel="next" title="CFhM xjb training 题解">
-                <i class="fa fa-chevron-left"></i> CFhM xjb training 题解
+              <a href="/2017/09/15/sol1/" rel="next" title="2017 BITCS 小学期程设总结赛题解">
+                <i class="fa fa-chevron-left"></i> 2017 BITCS 小学期程设总结赛题解
               </a>
             
           </div>
@@ -569,10 +576,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/12/C1/" rel="prev" title="C语言从入门到懵逼（一）">
-                C语言从入门到懵逼（一） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -737,7 +740,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vscode简介"><span class="nav-number">1.</span> <span class="nav-text"> vscode简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vscode的安装"><span class="nav-number">2.</span> <span class="nav-text"> vscode的安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vscode简单配置"><span class="nav-number">3.</span> <span class="nav-text"> vscode简单配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用插件"><span class="nav-number">3.1.</span> <span class="nav-text"> 常用插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置主题"><span class="nav-number">3.2.</span> <span class="nav-text"> 配置主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置文件图标"><span class="nav-number">3.3.</span> <span class="nav-text"> 配置文件图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#所有设置"><span class="nav-number">3.4.</span> <span class="nav-text"> 所有设置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vscode编写并运行cc程序"><span class="nav-number">4.</span> <span class="nav-text"> vscode编写并运行C/C++程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置mingw-g编译器"><span class="nav-number">4.1.</span> <span class="nav-text"> 配置mingw g++编译器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置系统环境变量"><span class="nav-number">4.2.</span> <span class="nav-text"> 设置系统环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试你的cc编译器"><span class="nav-number">4.3.</span> <span class="nav-text"> 测试你的C/C++编译器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vscode编写运行c程序"><span class="nav-number">5.</span> <span class="nav-text"> vscode编写运行C程序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vscode-使用脚本编译cc"><span class="nav-number">1.</span> <span class="nav-text"> vscode 使用脚本编译C/C++</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于gcc-g-编译命令"><span class="nav-number">1.1.</span> <span class="nav-text"> 关于gcc / g++ 编译命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用bat脚本实现自动化编译运行"><span class="nav-number">1.2.</span> <span class="nav-text"> 使用.bat脚本实现自动化编译运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结合分屏的输入输出重定向方法"><span class="nav-number">1.3.</span> <span class="nav-text"> 结合分屏的输入输出重定向方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vscode的分屏功能"><span class="nav-number">1.3.1.</span> <span class="nav-text"> vscode的分屏功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重定向输入输出"><span class="nav-number">1.3.2.</span> <span class="nav-text"> 重定向输入输出</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#freopen"><span class="nav-number">1.3.2.1.</span> <span class="nav-text"> freopen</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行时重定向"><span class="nav-number">1.3.2.2.</span> <span class="nav-text"> 运行时重定向</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vscode配置cc-debug"><span class="nav-number">2.</span> <span class="nav-text"> vscode配置C/C++ debug</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置launchjson文件"><span class="nav-number">2.1.</span> <span class="nav-text"> 配置launch.json文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置taskjson文件"><span class="nav-number">2.2.</span> <span class="nav-text"> 配置task.json文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用快捷键"><span class="nav-number">2.3.</span> <span class="nav-text"> 常用快捷键</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -904,7 +907,7 @@
 		_hcwp.push({widget:"Bloggerstream", widget_id: 95423, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
 		
-		_hcwp.push({widget:"Stream", widget_id: 95423, xid: "2017/09/11/vscode-1/"});
+		_hcwp.push({widget:"Stream", widget_id: 95423, xid: "2017/09/16/vscode-2/"});
 		
 
 		(function() {
