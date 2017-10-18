@@ -121,7 +121,7 @@
 <meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/7.png">
 <meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/123.png">
 <meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/9.png">
-<meta property="og:updated_time" content="2017-10-18T10:34:17.797Z">
+<meta property="og:updated_time" content="2017-10-18T12:55:47.032Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用visual studio编译运行汇编程序">
 <meta name="twitter:description" content="前言 ​	本文结合这篇文章提供了在Visual Studio 2017中利用masm依赖，在c++项目中编写、编译、运行汇编语言的方法。本文兼容Visual Studio 2012及以上版本。">
@@ -172,7 +172,6 @@
 
 
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
@@ -437,7 +436,7 @@
 <p>在项目资源管理器中右键项目，点击<code>生成依赖项</code>，勾选 <code>masm</code></p>
 <p><img src="http://ow4c379vu.bkt.clouddn.com/2.png" alt="Image2"></p>
 <p><img src="http://ow4c379vu.bkt.clouddn.com/3.png" alt="Image3"></p>
-<h1 id="设置subsystem"><a class="markdownIt-Anchor" href="#设置subsystem"></a> 设置<code>subsystem</code></h1>
+<h1 id="设置subsystem"><a class="markdownIt-Anchor" href="#设置subsystem"></a> 设置subsystem</h1>
 <p>右键<code>项目-属性</code>，在属性面板中展开<code>链接器-高级</code>，将<code>subsystem</code>设置为<code>Console</code>或<code>Windows</code></p>
 <p><img src="http://ow4c379vu.bkt.clouddn.com/4.png" alt=""></p>
 <p><img src="http://ow4c379vu.bkt.clouddn.com/5.png" alt=""></p>
@@ -447,9 +446,16 @@
 <p><img src="http://ow4c379vu.bkt.clouddn.com/6.png" alt=""></p>
 <p><img src="http://ow4c379vu.bkt.clouddn.com/7.png" alt=""></p>
 <h1 id="设置-entry-point可选"><a class="markdownIt-Anchor" href="#设置-entry-point可选"></a> 设置 <code>entry point</code>（可选）</h1>
-<p>如下图所示，本程序的入口即默认入口<code>main</code>，若程序入口不为<code>main</code>则需在<code>项目属性-高级-入口点</code>自行设置</p>
+<p>如下图所示，本程序的入口即默认入口<code>main</code>，若程序入口不为<code>main</code>则需在<code>项目属性-高级-入口点</code>自行设置 <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
 <p><img src="http://ow4c379vu.bkt.clouddn.com/123.png" alt=""></p>
 <p><img src="http://ow4c379vu.bkt.clouddn.com/9.png" alt=""></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>同样需要在项目资源管理器中右键 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
       
     </div>
@@ -959,7 +965,21 @@
         showTime(Counter);
       }
     });
-  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/custom.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -977,18 +997,5 @@
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
 </body>
 </html>
