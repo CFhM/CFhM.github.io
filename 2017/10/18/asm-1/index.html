@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="c/c++,asm," />
 
 
 
@@ -104,14 +104,28 @@
         }
     })();
 </script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="留言板">
-<meta property="og:url" content="http://yoursite.com/message/index.html">
+<meta name="description" content="前言 ​	本文结合这篇文章提供了在Visual Studio 2017中利用masm依赖，在c++项目中编写、编译、运行汇编语言的方法。本文兼容Visual Studio 2012及以上版本。">
+<meta name="keywords" content="c&#x2F;c++,asm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用visual studio编译运行汇编程序">
+<meta property="og:url" content="http://yoursite.com/2017/10/18/asm-1/index.html">
 <meta property="og:site_name" content="CFhM_R&#39;s Blog">
+<meta property="og:description" content="前言 ​	本文结合这篇文章提供了在Visual Studio 2017中利用masm依赖，在c++项目中编写、编译、运行汇编语言的方法。本文兼容Visual Studio 2012及以上版本。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-12T02:12:01.018Z">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/1.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/2.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/3.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/4.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/5.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/6.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/7.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/123.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/9.png">
+<meta property="og:updated_time" content="2017-10-18T08:43:40.179Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="留言板">
+<meta name="twitter:title" content="使用visual studio编译运行汇编程序">
+<meta name="twitter:description" content="前言 ​	本文结合这篇文章提供了在Visual Studio 2017中利用masm依赖，在c++项目中编写、编译、运行汇编语言的方法。本文兼容Visual Studio 2012及以上版本。">
+<meta name="twitter:image" content="http://ow4c379vu.bkt.clouddn.com/1.png">
 
 
 
@@ -141,13 +155,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/message/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/18/asm-1/"/>
 
 
 
 
 
-  <title>留言板 | CFhM_R's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>使用visual studio编译运行汇编程序 | CFhM_R's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -283,33 +297,220 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/18/asm-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CFhM_R">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/logo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CFhM_R's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">留言板</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+          <h1 class="post-title" itemprop="name headline">使用visual studio编译运行汇编程序</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-18T12:06:36+08:00">
+                2017-10-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/汇编/" itemprop="url" rel="index">
+                    <span itemprop="name">汇编</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/10/18/asm-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/10/18/asm-1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+             <span id="/2017/10/18/asm-1/" class="leancloud_visitors" data-flag-title="使用visual studio编译运行汇编程序">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>​	本文结合<a href="http://kipirvine.com/asm/gettingStartedVS2015/index.htm" target="_blank" rel="external">这篇文章</a>提供了在<code>Visual Studio 2017</code>中利用<code>masm</code>依赖，在c++项目中编写、编译、运行汇编语言的方法。本文兼容<code>Visual Studio 2012</code>及以上版本。</p>
+<a id="more"></a>
+<p>​	笔者系统环境如下：</p>
+<pre><code>&gt; OS ：Windows 10 Insider Preview, Build 17017
+&gt;
+&gt; VS ：Visual Studio 2017
+&gt;
+&gt; Windows SDK: 15063.0
+</code></pre>
+<h1 id="新建空白项目"><a class="markdownIt-Anchor" href="#新建空白项目"></a> 新建空白项目</h1>
+<p>在visual studio的菜单栏选择<code>文件-新建-项目</code>，并新建<code>win32 控制台程序</code>的<code>空项目</code>（vs2015及以前的版本请参考该版本的新建方式）</p>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/1.png" alt="Image1"></p>
+<h1 id="为项目添加masm依赖"><a class="markdownIt-Anchor" href="#为项目添加masm依赖"></a> 为项目添加masm依赖</h1>
+<p>在项目资源管理器中右键项目，点击<code>生成依赖项</code>，勾选 <code>masm</code></p>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/2.png" alt="Image2"></p>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/3.png" alt="Image3"></p>
+<h1 id="设置subsystem"><a class="markdownIt-Anchor" href="#设置subsystem"></a> 设置<code>subsystem</code></h1>
+<p>右键<code>项目-属性</code>，在属性面板中展开<code>链接器-高级</code>，将<code>subsystem</code>设置为<code>Console</code>或<code>Windows</code></p>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/4.png" alt=""></p>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/5.png" alt=""></p>
+<h1 id="编写asm代码"><a class="markdownIt-Anchor" href="#编写asm代码"></a> 编写asm代码</h1>
+<p>在<code>源文件</code>文件夹上右键<code>添加-新项目</code>，将<code>.cpp</code>文件重命名为<code>.asm</code>文件，并填入下面的测试代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">; AddTwo.asm - adds two 32-bit integers.</div><div class="line"></div><div class="line">.386</div><div class="line">.model flat,stdcall</div><div class="line">.stack 4096</div><div class="line">ExitProcess proto,dwExitCode:dword</div><div class="line"></div><div class="line">.code</div><div class="line">main proc</div><div class="line">    mov eax,5               </div><div class="line">    add eax,6               </div><div class="line"></div><div class="line">    invoke ExitProcess,0</div><div class="line">main endp</div><div class="line">end main</div></pre></td></tr></table></figure>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/6.png" alt=""></p>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/7.png" alt=""></p>
+<h1 id="设置-entry-point可选"><a class="markdownIt-Anchor" href="#设置-entry-point可选"></a> 设置 <code>entry point</code>（可选）</h1>
+<p>如下图所示，本程序的入口即默认入口<code>main</code>，若程序入口不为<code>main</code>则需在<code>项目属性-高级-入口点</code>自行设置</p>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/123.png" alt=""></p>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/9.png" alt=""></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/c-c/" rel="tag"># c/c++</a>
+          
+            <a href="/tags/asm/" rel="tag"># asm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/16/vscode-2/" rel="next" title="vscode编译运行以及配置debug C/C++">
+                <i class="fa fa-chevron-left"></i> vscode编译运行以及配置debug C/C++
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -344,8 +545,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -436,6 +646,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#新建空白项目"><span class="nav-number">2.</span> <span class="nav-text"> 新建空白项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为项目添加masm依赖"><span class="nav-number">3.</span> <span class="nav-text"> 为项目添加masm依赖</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置subsystem"><span class="nav-number">4.</span> <span class="nav-text"> 设置subsystem</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编写asm代码"><span class="nav-number">5.</span> <span class="nav-text"> 编写asm代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置-entry-point可选"><span class="nav-number">6.</span> <span class="nav-text"> 设置 entry point（可选）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -569,6 +795,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
@@ -593,7 +823,7 @@
 		_hcwp.push({widget:"Bloggerstream", widget_id: 95423, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
 		
-		_hcwp.push({widget:"Stream", widget_id: 95423, xid: "message/index.html"});
+		_hcwp.push({widget:"Stream", widget_id: 95423, xid: "2017/10/18/asm-1/"});
 		
 
 		(function() {
