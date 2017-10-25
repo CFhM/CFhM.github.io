@@ -127,7 +127,7 @@
 <meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/7.png">
 <meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/123.png">
 <meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/9.png">
-<meta property="og:updated_time" content="2017-10-18T12:55:47.032Z">
+<meta property="og:updated_time" content="2017-10-25T04:09:01.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用visual studio编译运行汇编程序">
 <meta name="twitter:description" content="前言 ​	本文结合这篇文章提供了在Visual Studio 2017中利用masm依赖，在c++项目中编写、编译、运行汇编语言的方法。本文兼容Visual Studio 2012及以上版本。">
@@ -451,10 +451,11 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">; AddTwo.asm - adds two 32-bit integers.</div><div class="line"></div><div class="line">.386</div><div class="line">.model flat,stdcall</div><div class="line">.stack 4096</div><div class="line">ExitProcess proto,dwExitCode:dword</div><div class="line"></div><div class="line">.code</div><div class="line">main proc</div><div class="line">    mov eax,5               </div><div class="line">    add eax,6               </div><div class="line"></div><div class="line">    invoke ExitProcess,0</div><div class="line">main endp</div><div class="line">end main</div></pre></td></tr></table></figure>
 <p><img src="http://ow4c379vu.bkt.clouddn.com/6.png" alt=""></p>
 <p><img src="http://ow4c379vu.bkt.clouddn.com/7.png" alt=""></p>
-<h1 id="设置-entry-point可选"><a class="markdownIt-Anchor" href="#设置-entry-point可选"></a> 设置 <code>entry point</code>（可选）</h1>
+<h1 id="设置-entry-point可选"><a class="markdownIt-Anchor" href="#设置-entry-point可选"></a> 设置 entry point（可选）</h1>
 <p>如下图所示，本程序的入口即默认入口<code>main</code>，若程序入口不为<code>main</code>则需在<code>项目属性-高级-入口点</code>自行设置 <sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="同样需要在项目资源管理器中右键">[1]</span></a></sup></p>
 <p><img src="http://ow4c379vu.bkt.clouddn.com/123.png" alt=""></p>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/9.png" alt=""><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">同样需要在项目资源管理器中右键<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div></p>
+<p>语法高亮由<code>AsmDude</code>插件支持<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="该插件需要在vs的`工具-扩展与更新`中下载">[2]</span></a></sup></p>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/9.png" alt=""><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">同样需要在项目资源管理器中右键<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">该插件需要在vs的<code>工具-扩展与更新</code>中下载<a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div></p>
 
       
     </div>
