@@ -62,11 +62,17 @@
   
 
   
+    
+      
+    
+
+    
+  
 
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -420,7 +426,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
 <p>​	本文结合<a href="http://kipirvine.com/asm/gettingStartedVS2015/index.htm" target="_blank" rel="external">这篇文章</a>提供了在<code>Visual Studio 2017</code>中利用<code>masm</code>依赖，在c++项目中编写、编译、运行汇编语言的方法。本文兼容<code>Visual Studio 2012</code>及以上版本。</p>
 <a id="more"></a>
 <p>​	笔者系统环境如下：</p>
@@ -446,16 +452,9 @@
 <p><img src="http://ow4c379vu.bkt.clouddn.com/6.png" alt=""></p>
 <p><img src="http://ow4c379vu.bkt.clouddn.com/7.png" alt=""></p>
 <h1 id="设置-entry-point可选"><a class="markdownIt-Anchor" href="#设置-entry-point可选"></a> 设置 <code>entry point</code>（可选）</h1>
-<p>如下图所示，本程序的入口即默认入口<code>main</code>，若程序入口不为<code>main</code>则需在<code>项目属性-高级-入口点</code>自行设置 <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<p>如下图所示，本程序的入口即默认入口<code>main</code>，若程序入口不为<code>main</code>则需在<code>项目属性-高级-入口点</code>自行设置 <sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="同样需要在项目资源管理器中右键">[1]</span></a></sup></p>
 <p><img src="http://ow4c379vu.bkt.clouddn.com/123.png" alt=""></p>
-<p><img src="http://ow4c379vu.bkt.clouddn.com/9.png" alt=""></p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>同样需要在项目资源管理器中右键 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/9.png" alt=""><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">同样需要在项目资源管理器中右键<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div></p>
 
       
     </div>

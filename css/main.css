@@ -487,7 +487,7 @@ pre,
 }
 pre,
 code {
-  font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
+  font-family: 'Consolas', consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
 }
 code {
   padding: 2px 4px;
@@ -1819,7 +1819,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6aff67;
+  background: #cdff24;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2988,31 +2988,6 @@ pre .javascript .function {
 .post-body p {
   text-indent: 2em;
   margin-bottom: 0.8em;
-}
-.footnotes li {
-  font-size: 13px;
-  line-height: 1.6;
-}
-.footnotes p {
-  text-indent: 0.5em;
-  margin-top: 0em;
-  margin-bottom: 0.5em;
-}
-.footnoteTip {
-  position: absolute;
-  width: 360px;
-  text-align: left;
-  background-color: #ffffe0;
-  border: 1px solid #636363;
-  padding: 5px;
-  font-size: 12px;
-  lineHeight: 1.8;
-  border-radius: 5px;
-}
-.footnoteTip p {
-  text-indent: 2em;
-  margin-top: 0em;
-  margin-bottom: 0.5em;
 }
 blockquote {
   margin-bottom: 0.8em;
