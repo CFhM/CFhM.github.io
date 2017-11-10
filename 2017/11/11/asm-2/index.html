@@ -85,7 +85,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="c/c++,asm," />
 
 
 
@@ -110,16 +110,24 @@
         }
     })();
 </script>
-<meta name="description" content="所谓的光辉岁月，不是那些闪耀的日子，而是无人问津时，你对梦想的坚持">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CFhM_R&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="前言 ​	写老师的大作业的时候，发现需要使用汇编实现scanf和printf的功能，在网上查了一下，scanf需要调用vc的库函数，printf自己实现就行了。 ​	对于scanf函数，需要使用masm的lib，然后在vs中includelib msvcrt.lib，这时候就需要下载安装masm，然后将其中的include和lib加入本项目，本文就是其中的具体操作。">
+<meta name="keywords" content="c&#x2F;c++,asm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编写汇编时使用c库函数">
+<meta property="og:url" content="http://yoursite.com/2017/11/11/asm-2/index.html">
 <meta property="og:site_name" content="CFhM_R&#39;s Blog">
-<meta property="og:description" content="所谓的光辉岁月，不是那些闪耀的日子，而是无人问津时，你对梦想的坚持">
+<meta property="og:description" content="前言 ​	写老师的大作业的时候，发现需要使用汇编实现scanf和printf的功能，在网上查了一下，scanf需要调用vc的库函数，printf自己实现就行了。 ​	对于scanf函数，需要使用masm的lib，然后在vs中includelib msvcrt.lib，这时候就需要下载安装masm，然后将其中的include和lib加入本项目，本文就是其中的具体操作。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/2017-11-11-1.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/2017-11-11-2.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/2017-11-11-3.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/2017-11-11-4.png">
+<meta property="og:image" content="http://ow4c379vu.bkt.clouddn.com/2017-11-11-5.gif">
+<meta property="og:updated_time" content="2017-11-10T17:41:23.385Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CFhM_R&#39;s Blog">
-<meta name="twitter:description" content="所谓的光辉岁月，不是那些闪耀的日子，而是无人问津时，你对梦想的坚持">
+<meta name="twitter:title" content="编写汇编时使用c库函数">
+<meta name="twitter:description" content="前言 ​	写老师的大作业的时候，发现需要使用汇编实现scanf和printf的功能，在网上查了一下，scanf需要调用vc的库函数，printf自己实现就行了。 ​	对于scanf函数，需要使用masm的lib，然后在vs中includelib msvcrt.lib，这时候就需要下载安装masm，然后将其中的include和lib加入本项目，本文就是其中的具体操作。">
+<meta name="twitter:image" content="http://ow4c379vu.bkt.clouddn.com/2017-11-11-1.png">
 
 
 
@@ -149,13 +157,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/11/asm-2/"/>
 
 
 
 
 
-  <title>归档 | CFhM_R's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>编写汇编时使用c库函数 | CFhM_R's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -174,7 +182,7 @@
   
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- 页面点击小红心 -->
   <script type="text/javascript" src="/js/src/love.js"></script>
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -322,370 +330,270 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/11/asm-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CFhM_R">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/logo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CFhM_R's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">编写汇编时使用c库函数</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-11T00:14:20+08:00">
+                2017-11-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 9 篇博客。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/汇编/" itemprop="url" rel="index">
+                    <span itemprop="name">汇编</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
 
-        
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/11/asm-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/11/11/asm-2/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
+             <span id="/2017/11/11/asm-2/" class="leancloud_visitors" data-flag-title="编写汇编时使用c库函数">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/11/asm-2/" itemprop="url">
-              
-                <span itemprop="name">编写汇编时使用c库函数</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-11T00:14:20+08:00"
-              content="2017-11-11" >
-          11-11
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/10/18/asm-1/" itemprop="url">
-              
-                <span itemprop="name">使用visual studio编译运行汇编程序</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-18T12:06:36+08:00"
-              content="2017-10-18" >
-          10-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/16/vscode-2/" itemprop="url">
-              
-                <span itemprop="name">vscode编译运行以及配置debug C/C++</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-16T19:37:40+08:00"
-              content="2017-09-16" >
-          09-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/15/sol1/" itemprop="url">
-              
-                <span itemprop="name">2017 BITCS 小学期程设总结赛题解</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-15T10:41:32+08:00"
-              content="2017-09-15" >
-          09-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><link rel="stylesheet" type="text/css" href="/hint.min.css"><h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>​	写老师的大作业的时候，发现需要使用汇编实现scanf和printf的功能，在网上查了一下，scanf需要调用vc的库函数，printf自己实现就行了。</p>
+<p>​	对于scanf函数，需要使用masm的lib，然后在vs中<code>includelib msvcrt.lib</code>，这时候就需要下载安装masm，然后将其中的include和lib加入本项目，本文就是其中的具体操作。</p>
+<a id="more"></a>
+<h1 id="下载安装masm32"><a class="markdownIt-Anchor" href="#下载安装masm32"></a> 下载安装masm32</h1>
+<ul>
+<li>
+<p>点击<a href="http://www.masm32.com/download.htm" target="_blank" rel="external">这里</a></p>
+</li>
+<li>
+<p>选择Australia1<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="下面几个带中文的都行">[1]</span></a></sup>下载</p>
+</li>
+<li>
+<p>解压之后点击install，选择好安装的目录，之后傻瓜式下一步即可</p>
+</li>
+</ul>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/2017-11-11-1.png" alt=""></p>
+<h1 id="在vs项目中配置sup-idfnref2a-hreffn2-relfootnotespan-classhint-top-right-hint-error-hint-large-aria-label以下操作均要在项目资源管理器中右键项目-属性窗口中操作2spanasup"><a class="markdownIt-Anchor" href="#在vs项目中配置sup-idfnref2a-hreffn2-relfootnotespan-classhint-top-right-hint-error-hint-large-aria-label以下操作均要在项目资源管理器中右键项目-属性窗口中操作2spanasup"></a> 在vs项目中配置<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="以下操作均要在项目资源管理器中右键项目-属性窗口中操作">[2]</span></a></sup></h1>
+<h2 id="配置include"><a class="markdownIt-Anchor" href="#配置include"></a> 配置include</h2>
+<ul>
+<li>
+<p>Microsoft Macro Assembler-通用-Include Paths<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="中文翻译可能是“包含路径”？">[3]</span></a></sup></p>
+</li>
+<li>
+<p>在这里添加你的masm的include文件夹</p>
+</li>
+</ul>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/2017-11-11-2.png" alt=""></p>
+<h2 id="配置lib"><a class="markdownIt-Anchor" href="#配置lib"></a> 配置lib</h2>
+<ul>
+<li>链接器-通用-附加库目录</li>
+<li>在这里添加你的masm的lib文件夹</li>
+</ul>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/2017-11-11-3.png" alt=""></p>
+<h2 id="配置生成程序的类型可选"><a class="markdownIt-Anchor" href="#配置生成程序的类型可选"></a> 配置生成程序的类型（可选）</h2>
+<blockquote>
+<p>说明：如果按照之前一篇博客的说明配置过了就可以跳过</p>
+</blockquote>
+<ul>
+<li>链接器-系统-子系统</li>
+<li>选择控制台<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="也可能没翻译，就是Console">[4]</span></a></sup></li>
+</ul>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/2017-11-11-4.png" alt=""></p>
+<h1 id="测试"><a class="markdownIt-Anchor" href="#测试"></a> 测试</h1>
+<h2 id="测试代码"><a class="markdownIt-Anchor" href="#测试代码"></a> 测试代码</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">.386</div><div class="line">.MODEL flat,stdcall</div><div class="line">.STACK 4096</div><div class="line"></div><div class="line">includelib msvcrt.lib</div><div class="line">printf PROTO C:ptr sbyte,:vararg</div><div class="line">scanf PROTO C:ptr sbyte,:vararg</div><div class="line"></div><div class="line">MAX = 100</div><div class="line"></div><div class="line">.data</div><div class="line"></div><div class="line">num1 db MAX dup(0)</div><div class="line">num2 db MAX dup(0)</div><div class="line"></div><div class="line">stringnum db &quot;%d %d&quot;,0AH,0DH,0</div><div class="line">inputhintstring db &quot;hello, 你这么好看，输入两个数字好不好呀。&quot;,0ah,0dh,0</div><div class="line">scanstring db &quot;%s %s&quot;,0</div><div class="line">printstring db &quot;结果是：&quot;,0ah,0dh,&quot;%s ， %s&quot;,0</div><div class="line"></div><div class="line"></div><div class="line">.code</div><div class="line">main proc</div><div class="line">	invoke printf,offset inputhintstring</div><div class="line">	invoke scanf,offset scanstring,offset num1,offset num2</div><div class="line"></div><div class="line">	invoke printf,offset printstring,offset num1,offset num2</div><div class="line">	</div><div class="line">	ret</div><div class="line"></div><div class="line">main endp</div><div class="line">end main</div></pre></td></tr></table></figure>
+<h2 id="测试结果"><a class="markdownIt-Anchor" href="#测试结果"></a> 测试结果</h2>
+<p><img src="http://ow4c379vu.bkt.clouddn.com/2017-11-11-5.gif" alt=""><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">下面几个带中文的都行<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">以下操作均要在项目资源管理器中右键项目-属性窗口中操作<a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">中文翻译可能是“包含路径”？<a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">也可能没翻译，就是Console<a href="#fnref:4" rev="footnote"> ↩</a></span></li></ol></div></div></p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/12/C3/" itemprop="url">
-              
-                <span itemprop="name">C语言从入门到懵逼（三）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-12T12:57:49+08:00"
-              content="2017-09-12" >
-          09-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/12/C2/" itemprop="url">
-              
-                <span itemprop="name">C语言从入门到懵逼（二）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-12T12:54:49+08:00"
-              content="2017-09-12" >
-          09-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/12/C1/" itemprop="url">
-              
-                <span itemprop="name">C语言从入门到懵逼（一）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-12T12:49:00+08:00"
-              content="2017-09-12" >
-          09-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/11/vscode-1/" itemprop="url">
-              
-                <span itemprop="name">vscode安装及使用coderunner运行C程序教程</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-11T23:42:17+08:00"
-              content="2017-09-11" >
-          09-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/11/sol2/" itemprop="url">
-              
-                <span itemprop="name">CFhM xjb training 题解</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-11T12:13:11+08:00"
-              content="2017-09-11" >
-          09-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>本博客收到的所有打赏均将用于博主女朋友的化妆品购买及养胖计划</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/TIM图片20171025120045.jpg" alt="CFhM_R 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/TIM图片20171025114759.jpg" alt="CFhM_R 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/c-c/" rel="tag"># c/c++</a>
+          
+            <a href="/tags/asm/" rel="tag"># asm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/18/asm-1/" rel="next" title="使用visual studio编译运行汇编程序">
+                <i class="fa fa-chevron-left"></i> 使用visual studio编译运行汇编程序
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -693,6 +601,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="hypercomments_widget"></div>
+    
+  </div>
+
 
         </div>
         
@@ -713,8 +627,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -805,6 +728,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下载安装masm32"><span class="nav-number">2.</span> <span class="nav-text"> 下载安装masm32</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在vs项目中配置sup-idfnref2a-hreffn2-relfootnotespan-classhint-top-right-hint-error-hint-large-aria-label以下操作均要在项目资源管理器中右键项目-属性窗口中操作2spanasup"><span class="nav-number">3.</span> <span class="nav-text"> 在vs项目中配置[2]</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置include"><span class="nav-number">3.1.</span> <span class="nav-text"> 配置include</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置lib"><span class="nav-number">3.2.</span> <span class="nav-text"> 配置lib</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置生成程序的类型可选"><span class="nav-number">3.3.</span> <span class="nav-text"> 配置生成程序的类型（可选）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试"><span class="nav-number">4.</span> <span class="nav-text"> 测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#测试代码"><span class="nav-number">4.1.</span> <span class="nav-text"> 测试代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试结果"><span class="nav-number">4.2.</span> <span class="nav-text"> 测试结果</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -933,6 +872,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
@@ -956,6 +899,8 @@
 
 		_hcwp.push({widget:"Bloggerstream", widget_id: 95423, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
+		
+		_hcwp.push({widget:"Stream", widget_id: 95423, xid: "2017/11/11/asm-2/"});
 		
 
 		(function() {

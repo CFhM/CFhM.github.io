@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[编写汇编时使用c库函数]]></title>
+    <url>%2F2017%2F11%2F11%2Fasm-2%2F</url>
+    <content type="text"><![CDATA[前言 ​ 写老师的大作业的时候，发现需要使用汇编实现scanf和printf的功能，在网上查了一下，scanf需要调用vc的库函数，printf自己实现就行了。 ​ 对于scanf函数，需要使用masm的lib，然后在vs中includelib msvcrt.lib，这时候就需要下载安装masm，然后将其中的include和lib加入本项目，本文就是其中的具体操作。 下载安装masm32 点击这里 选择Australia1[1]下载 解压之后点击install，选择好安装的目录，之后傻瓜式下一步即可 在vs项目中配置[2] 配置include Microsoft Macro Assembler-通用-Include Paths[3] 在这里添加你的masm的include文件夹 配置lib 链接器-通用-附加库目录 在这里添加你的masm的lib文件夹 配置生成程序的类型（可选） 说明：如果按照之前一篇博客的说明配置过了就可以跳过 链接器-系统-子系统 选择控制台[4] 测试 测试代码 1234567891011121314151617181920212223242526272829303132.386.MODEL flat,stdcall.STACK 4096includelib msvcrt.libprintf PROTO C:ptr sbyte,:varargscanf PROTO C:ptr sbyte,:varargMAX = 100.datanum1 db MAX dup(0)num2 db MAX dup(0)stringnum db &quot;%d %d&quot;,0AH,0DH,0inputhintstring db &quot;hello, 你这么好看，输入两个数字好不好呀。&quot;,0ah,0dh,0scanstring db &quot;%s %s&quot;,0printstring db &quot;结果是：&quot;,0ah,0dh,&quot;%s ， %s&quot;,0.codemain proc invoke printf,offset inputhintstring invoke scanf,offset scanstring,offset num1,offset num2 invoke printf,offset printstring,offset num1,offset num2 retmain endpend main 测试结果 1.下面几个带中文的都行 ↩2.以下操作均要在项目资源管理器中右键项目-属性窗口中操作 ↩3.中文翻译可能是“包含路径”？ ↩4.也可能没翻译，就是Console ↩]]></content>
+      <categories>
+        <category>汇编</category>
+      </categories>
+      <tags>
+        <tag>c/c++</tag>
+        <tag>asm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[使用visual studio编译运行汇编程序]]></title>
     <url>%2F2017%2F10%2F18%2Fasm-1%2F</url>
     <content type="text"><![CDATA[前言 ​ 本文结合这篇文章提供了在Visual Studio 2017中利用masm依赖，在c++项目中编写、编译、运行汇编语言的方法。本文兼容Visual Studio 2012及以上版本。 ​ 笔者系统环境如下： OS ：Windows 10 Insider Preview, Build 17017 VS ：Visual Studio 2017 Windows SDK: 15063.0 新建空白项目 在visual studio的菜单栏选择文件-新建-项目，并新建win32 控制台程序的空项目（vs2015及以前的版本请参考该版本的新建方式） 为项目添加masm依赖 在项目资源管理器中右键项目，点击生成依赖项，勾选 masm 设置subsystem 右键项目-属性，在属性面板中展开链接器-高级，将subsystem设置为Console或Windows 编写asm代码 在源文件文件夹上右键添加-新项目，将.cpp文件重命名为.asm文件，并填入下面的测试代码。 123456789101112131415; AddTwo.asm - adds two 32-bit integers..386.model flat,stdcall.stack 4096ExitProcess proto,dwExitCode:dword.codemain proc mov eax,5 add eax,6 invoke ExitProcess,0main endpend main 设置 entry point（可选） 如下图所示，本程序的入口即默认入口main，若程序入口不为main则需在项目属性-高级-入口点自行设置 [1] 语法高亮由AsmDude插件支持[2] 1.同样需要在项目资源管理器中右键 ↩2.该插件需要在vs的工具-扩展与更新中下载 ↩]]></content>
